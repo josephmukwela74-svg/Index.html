@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JMK CANARY - OHS Inspections & Vehicle Compliance Zambia</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f5f5f5;color:#333}
+.header{background:linear-gradient(135deg,#1a5276,#2e86c1);color:#fff;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.header h1{font-size:1.5rem;letter-spacing:1px}
+.header .tagline{font-size:.85rem;opacity:.85}
+.nav{background:#1a5276;padding:10px 40px;display:flex;gap:25px}
+.nav a{color:#d6eaf8;text-decoration:none;font-size:.9rem;padding:5px 10px;border-radius:4px;transition:background .2s}
+.nav a:hover{background:rgba(255,255,255,.15)}
+.container{max-width:1100px;margin:30px auto;padding:0 20px}
+.hero{text-align:center;padding:50px 20px;background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:30px}
+.hero h2{font-size:2rem;color:#1a5276;margin-bottom:15px}
+.hero p{font-size:1.05rem;color:#666;max-width:700px;margin:0 auto;line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-bottom:40px}
+.card{background:#fff;border-radius:10px;padding:25px;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 5px 18px rgba(0,0,0,.12)}
+.card .icon{font-size:2.2rem;margin-bottom:12px}
+.card h3{color:#2e86c1;font-size:1.2rem;margin-bottom:10px}
+.card p{color:#777;font-size:.9rem;line-height:1.5}
+.section-title{font-size:1.5rem;color:#1a5276;margin:35px 0 20px;border-bottom:3px solid #2e86c1;padding-bottom:8px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:40px}
+th{background:#2e86c1;color:#fff;padding:12px 16px;text-align:left;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+td{padding:12px 16px;border-bottom:1px solid #eee;font-size:.9rem}
+tr:hover{background:#eaf2f8}
+.status{padding:4px 12px;border-radius:20px;font-size:.8rem;font-weight:700}
+.status.pass{background:#d4edda;color:#155724}
+.status.fail{background:#f8d7da;color:#721c24}
+.status.pending{background:#fff3cd;color:#856404}
+.footer{background:#1a5276;color:#d6eaf8;text-align:center;padding:25px;margin-top:40px}
+.footer p{font-size:.85rem;opacity:.8}
+.form-row{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:15px}
+.form-row input,.form-row select{flex:1;min-width:200px;padding:10px 12px;border:1px solid #ccc;border-radius:6px;font-size:.9rem}
+.form-row input:focus,.form-row select:focus{outline:none;border-color:#2e86c1}
+.btn{background:#2e86c1;color:#fff;border:none;padding:12px 28px;border-radius:6px;font-size:.95rem;cursor:pointer;transition:background .2s}
+.btn:hover{background:#1a5276}
+.form-card{background:#fff;border-radius:10px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:30px}
+.form-card h3{color:#1a5276;margin-bottom:20px;font-size:1.3rem}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>JMK CANARY</h1>
+<span class="tagline">OHS Inspections &amp; Vehicle Compliance — Zambia</span>
+</div>
+<nav class="nav">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#inspections">Inspections</a>
+<a href="#book">Book Inspection</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container" id="home">
+<div class="hero">
+<h2>Occupational Health &amp; Safety Inspections</h2>
+<p>JMK CANARY provides professional OHS inspections and vehicle compliance services across Zambia. We help businesses meet statutory safety requirements and keep their fleets road-legal and roadworthy.</p>
+</div>
+
+<div class="cards" id="services">
+<div class="card">
+<div class="icon">🏭</div>
+<h3>Workplace OHS Audits</h3>
+<p>Comprehensive occupational health and safety audits for factories, offices, and construction sites in line with Zambian statutory requirements.</p>
+</div>
+<div class="card">
+<div class="icon">🚛</div>
+<h3>Vehicle Roadworthiness</h3>
+<p>Vehicle inspections and roadworthiness certification for trucks, buses, and light commercial vehicles to ensure full RTSA compliance.</p>
+</div>
+<div class="card">
+<div class="icon">📋</div>
+<h3>Compliance Documentation</h3>
+<p>Preparation and review of safety compliance documentation, risk assessments, and inspection reports for regulatory submission.</p>
+</div>
+<div class="card">
+<div class="icon">👷</div>
+<h3>PPE &amp; Safety Training</h3>
+<p>Personal protective equipment assessments and safety training programmes tailored to your workforce and operating environment.</p>
+</div>
+</div>
+
+<h2 class="section-title" id="inspections">Recent Inspections</h2>
+<table>
+<thead>
+<tr><th>Ref No.</th><th>Client</th><th>Type</th><th>Date</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>JMK-2026-001</td><td>Kafue Freight Ltd</td><td>Vehicle Roadworthiness</td><td>15 Sep 2026</td><td><span class="status pass">Passed</span></td></tr>
+<tr><td>JMK-2026-002</td><td>Ndola Copper Works</td><td>Workplace OHS Audit</td><td>18 Sep 2026</td><td><span class="status pending">Pending</span></td></tr>
+<tr><td>JMK-2026-003</td><td>Lusaka Logistics Co</td><td>Vehicle Roadworthiness</td><td>22 Sep 2026</td><td><span class="status fail">Failed</span></td></tr>
+<tr><td>JMK-2026-004</td><td>Kitwe Construction</td><td>PPE Assessment</td><td>25 Sep 2026</td><td><span class="status pass">Passed</span></td></tr>
+</tbody>
+</table>
+
+<div class="form-card" id="book">
+<h3>Book an Inspection</h3>
+<form onsubmit="alert('Thank you! JMK CANARY will contact you shortly to confirm your inspection.');return false">
+<div class="form-row">
+<input type="text" placeholder="Company / Client Name" required>
+<input type="text" placeholder="Contact Person" required>
+</div>
+<div class="form-row">
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number">
+</div>
+<div class="form-row">
+<select required>
+<option value="">Select Inspection Type</option>
+<option>Workplace OHS Audit</option>
+<option>Vehicle Roadworthiness</option>
+<option>Compliance Documentation</option>
+<option>PPE &amp; Safety Training</option>
+</select>
+<input type="date" required>
+</div>
+<div class="form-row">
+<button type="submit" class="btn">Submit Booking Request</button>
+</div>
+</form>
+</div>
+</div>
+
+<div class="footer" id="contact">
+<p>JMK CANARY — OHS Inspections &amp; Vehicle Compliance Zambia | Lusaka, Zambia | info@jmkcanary.co.zm</p>
+</div>
+</body>
+</html>
