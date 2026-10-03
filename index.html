@@ -91,6 +91,54 @@ tr:hover{background:#eaf2f8}
 /* Footer */
 .footer{background:#1a5276;color:#d6eaf8;text-align:center;padding:25px;margin-top:40px}
 .footer p{font-size:.85rem;opacity:.8}
+/* Standards */
+.std-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:30px}
+.std-card{background:#fff;border-radius:10px;padding:25px;box-shadow:0 2px 10px rgba(0,0,0,.08);border-left:4px solid #2e86c1}
+.std-card .std-badge{display:inline-block;background:#eaf2f8;color:#1a5276;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:10px}
+.std-card h4{color:#1a5276;font-size:1.05rem;margin-bottom:8px}
+.std-card p{color:#777;font-size:.85rem;line-height:1.5}
+.std-card .scope{display:block;margin-top:8px;font-size:.8rem;color:#2e86c1;font-weight:600}
+/* ISO 45001 Assessment */
+.iso-assessment{background:#fff;border-radius:10px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:30px}
+.iso-assessment h3{color:#1a5276;margin-bottom:15px;font-size:1.3rem}
+.iso-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:20px}
+.iso-tab{padding:8px 14px;border:1px solid #ccc;border-radius:6px;cursor:pointer;font-size:.85rem;background:#f9f9f9;transition:all .2s}
+.iso-tab.active{background:#2e86c1;color:#fff;border-color:#2e86c1}
+.iso-tab:hover:not(.active){background:#eaf2f8}
+.iso-clause{display:none}
+.iso-clause.active{display:block}
+.iso-question{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid #eee}
+.iso-question:last-child{border-bottom:none}
+.iso-question input[type=checkbox]{width:20px;height:20px;margin-top:2px;accent-color:#2e86c1;cursor:pointer;flex-shrink:0}
+.iso-question .qtext{flex:1}
+.iso-question .qtext strong{font-size:.9rem;color:#333}
+.iso-question .qtext small{display:block;color:#888;font-size:.8rem;margin-top:2px}
+.iso-summary{display:flex;justify-content:space-between;align-items:center;margin-top:15px;padding-top:15px;border-top:2px solid #eee}
+.iso-summary .score{font-size:1.1rem;font-weight:700;color:#1a5276}
+.iso-summary .verdict{padding:4px 12px;border-radius:20px;font-size:.85rem;font-weight:700}
+/* Risk Matrix */
+.risk-matrix-wrap{background:#fff;border-radius:10px;padding:30px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:30px}
+.risk-matrix-wrap h3{color:#1a5276;margin-bottom:15px;font-size:1.3rem}
+.risk-matrix-wrap>p{color:#888;font-size:.85rem;margin-bottom:20px}
+.risk-matrix{display:grid;grid-template-columns:60px repeat(5,1fr);gap:4px;max-width:600px;margin:0 auto}
+.rm-cell{padding:10px 4px;text-align:center;font-size:.75rem;font-weight:600;border-radius:4px;cursor:pointer;transition:transform .15s;min-height:42px;display:flex;align-items:center;justify-content:center}
+.rm-cell:hover{transform:scale(1.05)}
+.rm-cell.header{background:#1a5276;color:#fff;cursor:default;font-size:.7rem}
+.rm-cell.label{background:#eaf2f8;color:#1a5276;cursor:default;font-size:.7rem;font-weight:700}
+.rm-cell.risk-low{background:#d4edda;color:#155724}
+.rm-cell.risk-medium{background:#fff3cd;color:#856404}
+.rm-cell.risk-high{background:#ffe0b2;color:#e65100}
+.rm-cell.risk-extreme{background:#f8d7da;color:#721c24}
+.rm-cell.selected{outline:3px solid #1a5276;outline-offset:1px;font-weight:800}
+.risk-legend{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-top:15px}
+.risk-legend span{font-size:.8rem;display:flex;align-items:center;gap:5px}
+.risk-legend .dot{width:12px;height:12px;border-radius:3px;display:inline-block}
+.risk-hazards{margin-top:20px}
+.risk-hazards h4{color:#1a5276;font-size:1rem;margin-bottom:10px}
+.hazard-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.hazard-row input{flex:1;min-width:150px;padding:8px 10px;border:1px solid #ccc;border-radius:6px;font-size:.85rem}
+.hazard-row select{padding:8px 10px;border:1px solid #ccc;border-radius:6px;font-size:.85rem}
+.hazard-row .rm-tag{padding:4px 10px;border-radius:4px;font-size:.75rem;font-weight:700}
 @media(max-width:600px){
 .header{padding:15px 20px}
 .header h1{font-size:1.2rem}
@@ -112,6 +160,8 @@ tr:hover{background:#eaf2f8}
 <a href="#dashboard">Dashboard</a>
 <a href="#inspections">Inspections</a>
 <a href="#checklist">Self-Assessment</a>
+<a href="#standards">Standards</a>
+<a href="#risk-matrix">Risk Matrix</a>
 <a href="#book">Book Inspection</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -186,6 +236,98 @@ tr:hover{background:#eaf2f8}
 <div class="score-display">
 <span class="score" id="checklist-score">0 / 0</span>
 <span class="verdict" id="checklist-verdict">Not assessed</span>
+</div>
+</div>
+
+<!-- World Standards Reference -->
+<h2 class="section-title" id="standards">International Standards</h2>
+<p style="color:#666;font-size:.9rem;margin-bottom:20px;line-height:1.6">JMK CANARY aligns its inspection and compliance services with internationally recognised standards for occupational health, safety, and road traffic management.</p>
+<div class="std-cards">
+<div class="std-card">
+<span class="std-badge">ISO 45001:2018</span>
+<h4>OH&amp;S Management Systems</h4>
+<p>The international standard for occupational health and safety management systems. Provides a framework to manage OH&amp;S risks, improve safety performance, and create safer workplaces.</p>
+<span class="scope">Scope: All workplace OHS audits</span>
+</div>
+<div class="std-card">
+<span class="std-badge">ISO 39001:2012</span>
+<h4>Road Traffic Safety Management</h4>
+<p>International standard for road traffic safety management systems. Helps organisations reduce road traffic deaths and serious injuries, critical for fleet and transport operations.</p>
+<span class="scope">Scope: Vehicle roadworthiness inspections</span>
+</div>
+<div class="std-card">
+<span class="std-badge">ILO-OSH 2001</span>
+<h4>ILO Guidelines on OSH</h4>
+<p>International Labour Organization guidelines for occupational safety and health management systems. A tripartite approach involving government, employers, and workers.</p>
+<span class="scope">Scope: Workplace safety audits &amp; training</span>
+</div>
+<div class="std-card">
+<span class="std-badge">UN GHS Rev.9</span>
+<h4>Globally Harmonized System</h4>
+<p>United Nations system for the classification and labelling of chemicals. Ensures hazard communication standards for chemical storage, handling, and SDS documentation.</p>
+<span class="scope">Scope: Hazardous chemical compliance</span>
+</div>
+<div class="std-card">
+<span class="std-badge">ISO 45003:2021</span>
+<h4>Psychological Health &amp; Safety</h4>
+<p>Guidelines for managing psychological health and safety at work within an OH&amp;S management system. Addresses workplace stress, burnout, and mental wellbeing.</p>
+<span class="scope">Scope: Comprehensive OHS assessments</span>
+</div>
+<div class="std-card">
+<span class="std-badge">ISO 19011:2018</span>
+<h4>Guidelines for Auditing</h4>
+<p>International guidelines for auditing management systems. Provides principles for audit planning, execution, and reporting — the backbone of our audit methodology.</p>
+<span class="scope">Scope: All inspection &amp; audit procedures</span>
+</div>
+</div>
+
+<!-- ISO 45001 Compliance Assessment -->
+<div class="iso-assessment">
+<h3>ISO 45001:2018 Compliance Assessment</h3>
+<p style="color:#888;font-size:.85rem;margin-bottom:15px">Assess your organisation against the seven main clauses of ISO 45001. Tick each requirement you meet. Scores are saved on this device.</p>
+<div class="iso-tabs" id="iso-tabs"></div>
+<div id="iso-clauses-container"></div>
+<div class="iso-summary">
+<span class="score" id="iso-score">0 / 0 requirements met</span>
+<span class="verdict" id="iso-verdict">Not assessed</span>
+</div>
+</div>
+
+<!-- Risk Assessment Matrix -->
+<h2 class="section-title" id="risk-matrix">Risk Assessment Matrix</h2>
+<div class="risk-matrix-wrap">
+<h3>5×5 Hazard Risk Matrix</h3>
+<p>Select a risk level on the matrix to log hazards at that level. Based on the international standard likelihood × severity model used in ISO 45001 risk assessments.</p>
+<div class="risk-matrix" id="risk-matrix-grid"></div>
+<div class="risk-legend">
+<span><span class="dot" style="background:#d4edda"></span>Low (1–4)</span>
+<span><span class="dot" style="background:#fff3cd"></span>Medium (5–9)</span>
+<span><span class="dot" style="background:#ffe0b2"></span>High (10–14)</span>
+<span><span class="dot" style="background:#f8d7da"></span>Extreme (15–25)</span>
+</div>
+<div class="risk-hazards" id="risk-hazards-section">
+<h4>Log a Hazard</h4>
+<div class="hazard-row">
+<input type="text" id="hazard-desc" placeholder="Describe the hazard...">
+<select id="hazard-likelihood">
+<option value="">Likelihood</option>
+<option value="1">Rare</option>
+<option value="2">Unlikely</option>
+<option value="3">Possible</option>
+<option value="4">Likely</option>
+<option value="5">Almost Certain</option>
+</select>
+<select id="hazard-severity">
+<option value="">Severity</option>
+<option value="1">Insignificant</option>
+<option value="2">Minor</option>
+<option value="3">Moderate</option>
+<option value="4">Major</option>
+<option value="5">Catastrophic</option>
+</select>
+<button class="btn" onclick="addHazard()">Add</button>
+</div>
+<div id="hazard-list" style="margin-top:15px"></div>
 </div>
 </div>
 
