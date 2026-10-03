@@ -1,0 +1,21 @@
+# JMK CANARY — Production Docker Compose
+# Usage:
+#   docker compose up -d --build
+#
+# Environment variables (set in .env or shell):
+#   PORT  — host port to expose (default: 80)
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "${PORT:-80}:80"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
